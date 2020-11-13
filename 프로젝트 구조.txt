@@ -1,0 +1,15 @@
+또봄 프로젝트 구조
+
+일단 백엔드 강의에서 사용했던 기본 프로젝트 구조대로 만들었습니다.
+python 관련 환경 설정은 아직 하지 않았습니다.
+
+main
+    /static
+        /css : static css파일 사용시 이쪽에 저장
+        /img : 그림파일 저장
+
+    /templates : html 코드는 이쪽에 작성
+        /main.html : 사용할 외부 스크립트 이곳에 작성
+        /home.html : 홈페이지 접속 시 처음 보여지는 페이지
+                {% block contents %}, {% endblock %} : 하위 페이지 작성시 body 내용부분을 이쪽에 작성.
+                그러면 main.html의 block contents에 이어서 붙는다고 생각하시면 됩니다.
