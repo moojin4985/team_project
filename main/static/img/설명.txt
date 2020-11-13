@@ -1,0 +1,1 @@
+static으로 사용할 image 파일들 저장
