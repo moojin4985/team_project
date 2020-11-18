@@ -1,8 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, loader
 
 # Create your views here.
 from django.http import HttpResponse
 
 
-def index(request):
-    return HttpResponse("Hello, world. You're at the polls index.")
+def home(request):
+    return render(request, "home/main.html")

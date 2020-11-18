@@ -38,11 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-<<<<<<< Updated upstream
-    'iseeuagain',
-=======
-    'bootstrap4',
->>>>>>> Stashed changes
+    'home',
 ]
 
 MIDDLEWARE = [
