@@ -14,4 +14,5 @@ urlpatterns = [
     path('event', views.event),
     path('map', views.map),
     path('board', views.board),
+    path('viewboard', views.viewboard),
 ]

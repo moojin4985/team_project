@@ -48,3 +48,9 @@ def map(request):
 def board(request):
     postlist = Post.objects.all()
     return render(request, "board.html", {'postlist': postlist})
+
+
+def viewboard(request, auther):
+    post = Post.objects.get(pk=auther)
+    return render(request, "viewboard.html", {'post': post})
+
