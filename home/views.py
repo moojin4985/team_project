@@ -9,6 +9,10 @@ def home(request):
     return render(request, "base.html")
 
 
+def home(request):
+    return render(request, "home.html")
+
+
 def establish(request):
     return render(request, "establish.html")
 
@@ -50,7 +54,7 @@ def board(request):
     return render(request, "board.html", {'postlist': postlist})
 
 
-def viewboard(request, auther):
-    post = Post.objects.get(pk=auther)
+def viewboard(request, pk):
+    post = Post.objects.get(pk=pk)
     return render(request, "viewboard.html", {'post': post})
 
