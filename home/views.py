@@ -6,9 +6,12 @@ from .models import Post
 
 
 def home(request):
-    return render(request, "home/main.html")
+    return render(request, "base.html")
+
+def team(request):
+    return render(request, "team.html")
 
 
 def board(request):
     postlist = Post.objects.all()
-    return render(request, "home/home.html", {'postlist': postlist})
+    return render(request, "board.html", {'postlist': postlist})

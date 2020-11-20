@@ -50,9 +50,8 @@
     <div class="container">
 
         <div class="../../starter-template">
-            <h1>Bootstrap starter template</h1>
-            <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text
-                and a mostly barebones HTML document.</p>
+            {% block content %}
+            {% endblock %}
         </div>
 
     </div><!-- /.container -->
@@ -64,15 +63,6 @@
     <script src="../../static/js/jquery.min.js"></script>
     <script src="../../static/js/bootstrap.min.js"></script>
 
-        <h1>게시판 페이지입니다</h1>
-        <table>
-            {% for list in postlist %}
-            <ul>
-                <li>{{list.title}}</li>
-                <li>{{list.pub_date}}</li>
-            </ul>
-            {% endfor %}
-        </table>
 
 </body>
 
