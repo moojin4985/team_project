@@ -6,11 +6,7 @@ from .models import Post
 
 
 def home(request):
-    return render(request, "base.html")
-
-
-def home(request):
-    return render(request, "home.html")
+    return render(request, "main.html")
 
 
 def establish(request):
