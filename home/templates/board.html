@@ -7,7 +7,7 @@
 <table>
     {% for list in postlist %}
     <ul>
-        <li><a href="{{list.pk}}/">{{list.title}}<span>{{list.pub_date}}</span></a></li>
+        <li><a href="{% url 'viewboard' pk=list.pk %}">{{list.title}} <span>{{list.pub_date}}</span></a></li>
     </ul>
     {% endfor %}
 </table>

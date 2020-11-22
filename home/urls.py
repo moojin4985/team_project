@@ -14,6 +14,6 @@ urlpatterns = [
     path('team', views.team),
     path('event', views.event),
     path('map', views.map),
-    path('board', views.board),
-    path('viewboard', views.viewboard),
+    path('board/', views.board),
+    path('board/<int:pk>/', views.viewboard, name='viewboard'),
 ]
