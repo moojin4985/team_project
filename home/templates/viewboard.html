@@ -6,5 +6,9 @@
     <p>{{post.title}}</p>
     <p>{{post.text}}</p>
     <p>{{post.pub_date}}</p>
-
+    {% if post.mainphoto %}
+    <img src="{{ post.mainphoto.url }}" alt="" height="600">
+    <br>
+    {% endif %}
+    <a href="/home/board/">목록으로</a>
 {% endblock %}
