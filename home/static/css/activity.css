@@ -1,0 +1,16 @@
+
+/* :: 2.0 Import All CSS Plugins */
+@import url(../css/activity.css);
+
+
+
+
+body {
+  padding-top: 56px;
+}
+
+
+.btn-block {margin: 50px; }
+nav {margin: 30px auto;}
+.side-col {border: 1px solid rgba(0,0,0,.125); margin-top: 90px !important}
+.side-col h2 {padding:10px 0px 8px; text-align: center;}
