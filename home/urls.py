@@ -1,6 +1,9 @@
 from django.urls import path
 
 from . import views
+from django.conf.urls.static import static
+from django.conf import settings
+
 
 urlpatterns = [
     path('', views.home, name='home'),
@@ -15,4 +18,4 @@ urlpatterns = [
     path('map', views.map),
     path('board/', views.board),
     path('board/<int:pk>/', views.viewboard, name='viewboard'),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
