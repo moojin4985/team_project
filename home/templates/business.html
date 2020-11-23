@@ -1,1 +1,61 @@
 <!--사업소개 페이지-->
+{% extends 'base.html' %}
+
+{% block extra_script %}
+    <link href="/static/css/business.css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<div id="business" class="cont_kyca" role="main" aria-hidden="true">
+    <div id="bMain">
+        <div id="bInfo" class="cor_kyca">
+            <h3>사업 소개</h3>
+            <strong class="tit_intro">"I See u Again"<br/> 건강한 당신을 또 보고 싶습니다.</strong>
+            <div class="wrap_slide">
+                <div class="list_slide">
+                    <div class="thumb_slide">
+                        <img src="img/business.jpg" class="img_thumb" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="wrap_cont">
+                <div class="area_tit">
+                    <h4 class="tit_corp">Our Project<br>소개</h4>
+                </div>
+                <div class="area_cont">
+                    <strong class="subject_corp">극복의지 프로젝트</strong>
+                    <p class="desc_info">
+                        <ul>
+                            <li>
+                            01 여행버킷리스트 : 암투병 중인 환자가 완치 후 가고싶은 해외여행지를 설정, 달성 시 동행 및 여행경비 지원
+                            </li>
+                            <li>
+                            02 여행포토북 : 여행버킷리스트를 가고 싶은 의지를 불러일으킬 수 있는 매개체
+                            </li>
+                            <li>
+                            03 암을 극복한 사람들이 암환자에게 전하는 해피 바이러스 봉사
+                            </li>
+                        </ul>
+                    </p>
+                    <a href="#" target="_blank" class="btn_step btn_with">자세히 보기<span class="ico_corp ico_arr"></span></a>
+                </div>
+                <div class="area_cont area_cont2">
+                    <strong class="subject_corp">소통 프로젝트</strong>
+                    <p class="desc_info">
+                        <ul>
+                            <li>01 암환자와 소통하고 응원할 수 있는 소셜 채널 만들기</li>
+                            <li>02 힐링 콘서트</li>
+                            <li>03 소셜기부 챌린지 : 치료비가 부족하여 치료가 어려운 2030대 암환자에게 치료비 지원하기</li>
+                            <li>04 암 극복 후 재취업 지원</li>
+                        </ul>
+                    </p>
+                    <a href="#" target="_blank" class="btn_step btn_with">자세히 보기<span class="ico_corp ico_arr"></span></a>
+                </div>
+            </div>
+        </div>
+        <!--// bInfo -->
+    </div>
+    <!-- // bMain -->
+</div>
+<!-- // Content -->
+{% endblock %}
