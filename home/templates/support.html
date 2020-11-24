@@ -1,1 +1,50 @@
 <!--후원페이지-->
+{% extends 'base.html' %}
+
+{%block content %}
+<div class="container">
+    <div class="page-header text-center">
+        <div class="col-md-12 col-md-offset-3">
+            <h3>후원 참여자 정보 기록</h3>
+         </div>
+    </div>
+    <!--//page-header-->
+    <div class="col-md-12 col-md-offset-3">
+        <form role="form">
+            <div class="form-group">
+                <label for="inputName">성명</label>
+                <input type="text" class="form-control" id="inputName" placeholder="이름을 입력해 주세요">
+            </div>
+            <div class="form-group">
+                <label for="inputMobile">연락처</label>
+                <input type="tel" class="form-control" id="inputMobile" placeholder="휴대폰번호를 입력해 주세요">
+             </div>
+            <div class="form-group">
+                <label for="InputEmail">이메일 주소</label>
+                <input type="email" class="form-control" id="InputEmail" placeholder="이메일 주소를 입력해주세요">             
+           </div>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">내용</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="후원 내용 및 문의 사항" rows="3"></textarea>
+             </div>
+             <div class="form-group form-check">
+                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                 <label class="form-check-label" for="exampleCheck1">개인정보 수집 동의</label>
+                    <p style="font-size: 13px;">후원자의 인적사항을 기록하기 위해 또는 문의사항 접수 및 처리를 위해 위와 같이 개인정보를 수집합니다.<br>
+                    개인정보 수집 동의를 거부할 수있으며, 거부시 문의가 불가할 수 있습니다.</p>
+              </div>
+             <div class="form-group text-center">
+                   <button type="submit" id="join-submit" class="btn btn-primary">
+                        보내기<i class="fa fa-check spaceLeft"></i>
+                  </button>
+                 <button type="submit" class="btn btn-warning">
+                        취소<i class="fa fa-times spaceLeft"></i>
+                </button>
+            </div>
+        </form>
+        <!--//form-->
+     </div>
+
+</div>
+<!--//후원 컨테이너-->
+{%endblock%}

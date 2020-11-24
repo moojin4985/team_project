@@ -1,1 +1,45 @@
 <!--오시는길 페이지-->
+{% extends 'base.html' %}
+
+{%block content %}
+<div class="container">
+    <h1 class="text-center">오시는 길</h1>
+    <hr>
+    <div class="row">
+        <div class="col-sm-8">
+
+            <div id="daumRoughmapContainer1606110905572" class="col-sm-8 root_daum_roughmap root_daum_roughmap_landing">
+            </div>
+
+            <script charset="UTF-8" class="daum_roughmap_loader_script"
+                src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+            <!-- 실행 스크립트-->
+            <script charset="UTF-8">
+                new daum.roughmap.Lander({
+                    "timestamp": "1606110905572",
+                    "key": "233or",
+                    "mapWidth": "100%",
+                    "mapHeight": "360",
+                    "frameborder": "0"
+                }).render();
+            </script>
+        </div>
+        <!-- End Map -->
+
+        <div class="col-sm-4" id="contact2">
+            <h3>후원 문의 및 연락처</h3>
+            <hr align="left" width="50%">
+            <h4 class="pt-2">주소</h4>
+            서울특별시 강남구 테헤란로 2길 8,<br> 4층 17호(역삼동, 마이워크 스페이스) “또봄”<br>
+            <h4 class="pt-2">연락처</h4>
+            010-9414-4879<br>
+            <h4 class="pt-2">Email</h4>
+            iseeuagain17@gmail.com<br>
+            <h4 class="pt-2">YouTube</h4>
+            "또또봄tv"<br>
+        </div>
+    </div>
+</div>
+
+{%endblock%}

@@ -1,7 +1,7 @@
 from django.shortcuts import render, loader
 
 # Create your views here.
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from .models import Post
 
 
@@ -54,3 +54,20 @@ def viewboard(request, pk):
     post = Post.objects.get(pk=pk)
     return render(request, "viewboard.html", {'post': post})
 
+
+def newpost(request):
+    if request.method == 'POST':
+        if request.POST['mainphoto']:
+            new_article=Post.objects.create(
+                title=request.POST['title'],
+                text=request.POST['text'],
+                mainphoto=request.POST['mainphoto'],
+            )
+        else:
+            new_article=Post.objects.create(
+                title=request.POST['title'],
+                text=request.POST['text'],
+                mainphoto=request.POST['mainphoto'],
+        )
+        return HttpResponseRedirect('/home/board/')
+    return render(request, 'newpost.html')
