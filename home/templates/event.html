@@ -1,1 +1,31 @@
 <!--이벤트 캠페인 페이지-->>
+{% extends 'base.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width", initial-scale="1">
+        <title>이벤트</title>
+        <link rel="stylesheet" href="css/bootstrap.css">
+    </head>
+    <body>
+        <style type="text/css">
+            .jumbotron {
+                background-image: url('event_img1.png');
+                background-size: cover;
+                color: white;
+                text-shadow: black 0.2em 0.2em 0.2em;
+            }
+          
+        </style>
+      <div class="container">
+        <div class="jumbotron">
+            <h1 class="text-center">여행버킷챌린지 '앎' 캠페인</h1>
+        </div>
+        
+      
+      </div>
+    </body>
+</html>
+{% endblock %}
