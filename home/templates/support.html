@@ -5,46 +5,97 @@
 <div class="container">
     <div class="page-header text-center">
         <div class="col-md-12 col-md-offset-3">
-            <h3>후원 참여자 정보 기록</h3>
+            <h2>후원 하기</h3>
          </div>
     </div>
-    <!--//page-header-->
-    <div class="col-md-12 col-md-offset-3">
-        <form role="form">
-            <div class="form-group">
-                <label for="inputName">성명</label>
-                <input type="text" class="form-control" id="inputName" placeholder="이름을 입력해 주세요">
-            </div>
-            <div class="form-group">
-                <label for="inputMobile">연락처</label>
-                <input type="tel" class="form-control" id="inputMobile" placeholder="휴대폰번호를 입력해 주세요">
-             </div>
-            <div class="form-group">
-                <label for="InputEmail">이메일 주소</label>
-                <input type="email" class="form-control" id="InputEmail" placeholder="이메일 주소를 입력해주세요">             
-           </div>
-            <div class="form-group">
-                <label for="exampleFormControlTextarea1">내용</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="후원 내용 및 문의 사항" rows="3"></textarea>
-             </div>
-             <div class="form-group form-check">
-                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                 <label class="form-check-label" for="exampleCheck1">개인정보 수집 동의</label>
-                    <p style="font-size: 13px;">후원자의 인적사항을 기록하기 위해 또는 문의사항 접수 및 처리를 위해 위와 같이 개인정보를 수집합니다.<br>
-                    개인정보 수집 동의를 거부할 수있으며, 거부시 문의가 불가할 수 있습니다.</p>
-              </div>
-             <div class="form-group text-center">
-                   <button type="submit" id="join-submit" class="btn btn-primary">
-                        보내기<i class="fa fa-check spaceLeft"></i>
-                  </button>
-                 <button type="submit" class="btn btn-warning">
-                        취소<i class="fa fa-times spaceLeft"></i>
-                </button>
-            </div>
-        </form>
-        <!--//form-->
-     </div>
 
+    <div class="col-md-6 col-sm-6 col-xs-12">
+        <div id="accordion">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                            aria-controls="collapseOne">
+                            #1
+                        </button>
+                    </h5>
+                </div>
+        
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                            aria-expanded="false" aria-controls="collapseTwo">
+                            #2
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="card-body">
+                        Anim pariatur cliche
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
+                            aria-expanded="false" aria-controls="collapseThree">
+                            #3
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                    <div class="card-body">
+                        Anim
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--//아코디언 메뉴-->
+    <div class="col-md-6 col-sm-6 col-xs-12">
+            <form role="form">
+                <div class="form-group">
+                    <label for="inputName">성명</label>
+                    <input type="text" class="form-control" id="inputName" placeholder="이름을 입력해 주세요">
+                </div>
+                <div class="form-group">
+                    <label for="inputMobile">연락처</label>
+                    <input type="tel" class="form-control" id="inputMobile" placeholder="휴대폰번호를 입력해 주세요">
+                </div>
+                <div class="form-group">
+                    <label for="InputEmail">이메일 주소</label>
+                    <input type="email" class="form-control" id="InputEmail" placeholder="이메일 주소를 입력해주세요">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">내용</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="후원 내용 및 문의 사항"
+                        rows="3"></textarea>
+                </div>
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">개인정보 수집 동의</label>
+                    <p style="font-size: 13px;">후원자의 인적사항을 기록하기 위해 또는 문의사항 접수 및 처리를 위해 위와 같이 개인정보를 수집합니다.<br>
+                        개인정보 수집 동의를 거부할 수있으며, 거부시 문의가 불가할 수 있습니다.</p>
+                </div>
+                <div class="form-group text-center">
+                    <button type="submit" id="join-submit" class="btn btn-primary">
+                        보내기<i class="fa fa-check spaceLeft"></i>
+                    </button>
+                    <button type="submit" class="btn btn-warning">
+                        취소<i class="fa fa-times spaceLeft"></i>
+                    </button>
+                </div>
+            </form>
+    </div>
+    <!--//후원 참여자 정보 기록-->
 </div>
 <!--//후원 컨테이너-->
 {%endblock%}
