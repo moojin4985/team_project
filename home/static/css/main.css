@@ -63,6 +63,9 @@ label #btn{
   padding: 6px 12px;
   transition: all .5s;
 }
+label #btn:hover{color:#fff}
+label #btn:hover{background:#343a40}
+
 label #cancel{
   z-index: 1111;
   left: -195px;
@@ -101,9 +104,41 @@ label #cancel{
 
 
 /*----HOME----*/
+
 .home-content {
+  padding-top: 220px;
   text-align: center;
 }
-.home-content p {
+.page-title {
+  font-size: 5rem;
+  font-weight: 700;
+  font-family: 'Philosopher', serif;
+  text-transform: uppercase;
+  font-color: #432;
+}
+.sub-title {
+  font-family: 'Source Sans Pro', serif;
+  margin: 10px 0 42px;
+  font-size: 1.7rem;
+  font-weight: 700;
+  font-color: #432;
+  font-style: italic;
+}
+.home-content p{
+  margin: 10px 0 42px;
+  font-family: "나눔고딕", NanumGothic, sans-serif;
+  font-size: 1.375rem;
+  font-weight: normal;
+}
 
+/*---버튼----*/
+.button {
+  font-size: 1.125rem;
+  background: #0bd;
+  color: #fff;
+  border-radius: 5px;
+  padding: 18px 32px;
+}
+.button:hover {
+  background:  #0090aa;
 }
