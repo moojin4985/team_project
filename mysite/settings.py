@@ -22,10 +22,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '&%k^s3mn&jufb5t*3%fg^!^25597(jzn^4h1^3hcpqr2s!2o%5'
+# SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '&%k^s3mn&jufb5t*3%fg^!^25597(jzn^4h1^3hcpqr2s!2o%5')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+# DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))
 
+
+# HOST (주소 설정)
 ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com', 'localhost']
 
 
@@ -48,8 +52,52 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # 'csp.middleware.CSPMiddleware',
 ]
+"""
+# SSL/HTTPS 헤더 설정
+SECURE_SSL_REDIRECT = True
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+# HSTS
+SECURE_HSTS_SECONDS = 31536000  # 365 * 24 * 60 * 60
+SECURE_HSTS_PRELOAD = True
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+
+# X-Content-Type-Options
+SECURE_CONTENT_TYPE_NOSNIFF = True
+
+# X-XSS-Proection
+SECURE_BROWSER_XSS_FILTER = True
+
+# CSP_DEFAULT_SRC = ("'self'")
+
+CORS_ORIGIN_ALLOW_ALL = False
+CORS_ORIGIN_WHITELIST = ['localhost']
+CORS_URLS_REGEX = r'^/api/.*$'
+
+CORS_ALLOW_CREDENTIALS = True 
+
+CSRF_TRUSTED_ORIGINS = CORS_ORIGIN_WHITELIST
+
+
+# X-Frame-Options
+# X_FRAME_OPTIONS = 'DENY'
+
+# HttpOnly
+SESSION_COOKIE_HTTPONLY = True
+CSRF_COOKIE_HTTPONLY = True
+
+# Secure
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+
+# SameSite
+SESSION_COOKIE_SAMESITE = 'Lax'
+CSRF_COOKIE_SAMESITE = 'Lax'
+"""
 
 ROOT_URLCONF = 'mysite.urls'
 
