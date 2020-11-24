@@ -1,0 +1,44 @@
+
+.business_wrap {
+ max-width: 1160px; margin: 0 auto;
+}
+
+.b_intro_txt
+{   display: block;
+    padding-top: 73px;
+    font-size: 22px;
+    line-height: 34px;
+    color: #1e1e1e;
+    font-weight: bold;
+}
+
+.business_main img { display: block;
+  max-width: 1160px;
+  width: 100%;
+  margin-top: 100px;
+}
+
+.b_cont_wrap {
+    position: relative;
+}
+
+.b_tit {
+    float: left;
+    width: 300px;
+    display: block;
+    padding: 53px 40px 0 0;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 30px;
+    color: #1e1e1e;
+    vertical-align: top;
+}
+
+.b_cont {float: right;
+width: 860px;
+padding-top: 53px;
+font-size: 18px;
+line-height: 30px;
+color: #1e1e1e;
+display: block;
+}
