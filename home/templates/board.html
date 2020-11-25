@@ -8,9 +8,18 @@
 <table>
     {% for list in postlist %}
     <ul>
-        <li><a href="{% url 'viewboard' pk=list.pk %}">{{list.title}} <span>{{list.pub_date}}</span></a></li>
+        <li><a href="{% url 'viewboard' pk=list.pk %}"></a>{{list.title}} <span>{{list.pub_date}}</span></a></li>
     </ul>
     {% endfor %}
-    <button><a href="newpost/">글쓰기</a></button>
+    <!--<button><a href="newpost/">글쓰기</a></button>-->
+</table>
+
+<h1>후원자들</h1>
+<table>
+    {% for list in supportlist %}
+    <ul>
+        <li>{{list.name}} <span>{{list.phone_number}}</span><span>{{list.email}}</span></a></li>
+    </ul>
+    {% endfor %}
 </table>
 {% endblock %}
