@@ -10,23 +10,7 @@
         <link rel="stylesheet" href="css/bootstrap.css">
     </head>
     <body>
-     <!-- <style type="text/css">
-            .jumbotron {
-                background-image: url('../static/img/event/event_img1.png');
-                background-size: cover;
-                color: white;
-                text-shadow: black 0.2em 0.2em 0.2em;
-            }
-          
-        </style>
-      <div class="container">
-        <div class="jumbotron">
-            <h1 class="text-center">여행버킷챌린지 '앎' 캠페인</h1>
-        </div>
-        <p class="text-center"><img src="../static/img/event/event_img2.png" alt="" class="img-responsive"></p>
-      
-    </div>
--->  
+
   <!-- Page Content -->
   <div class="container">
 
@@ -37,45 +21,85 @@
 
         <h3 class="my-4">이벤트</h3>
 
-        <!-- Blog Post -->
+        <!-- Post1 -->
         <div class="card mb-4">
-          <img class="card-img-top" src="../static/img/event/2-4.png" alt="Card image cap">
+          <img class="card-img-top" src="../static/img/event/1-1.png" alt="Card image cap">
           <div class="card-body">
             <h2 class="card-title">암 경험자간 소통 모임 기획 및 지원
             </h2>
             <p class="card-text">젊은 암 경험자들이 모여 재능 및 정보 공유를 함으로써 경제적/정서적
                 안정감을 찾고, 이들의 권익이 침해되지 않도록 하여 사회에 조속히 복귀할 수
                 있도록 돕는 일을 합니다.</p>
-            <a href="#" class="btn btn-default">자세히 보기 &rarr;</a>
+            <a href="#" class="btn btn-default" data-target="#modal" data-toggle="modal">자세히 보기 &rarr;</a>
           </div>
 
         </div>
 
-        <!-- Blog Post -->
+        <!-- Post2 -->
         <div class="card mb-4">
-          <img class="card-img-top" src="../static/img/event/event_img2.PNG" alt="Card image cap">
+          <img class="card-img-top" src="../static/img/event/2-1.PNG" alt="Card image cap">
           <div class="card-body">
             <h2 class="card-title">여행버킷챌린지 ‘앎’ 캠페인
             </h2>
             <p class="card-text">암 투병 중이거나 추적 검사 중인 암 경험자들에게 질병을 극복할 수 있다는
                 자신감을 부여하고, 젊은 암 경험자들에 대한 인식 개선을 위한 캠페인을
                 진행합니다.</p>
-            <a href="#" class="btn btn-default">자세히 보기 &rarr;</a>
+            <a href="#" class="btn btn-default" data-target="#modal1" data-toggle="modal">자세히 보기 &rarr;</a>
           </div>
        
         </div>
-
-
       </div>
 
      </div>
     <!-- /.row -->
+    <div class="row">
+        <div class="modal" id="modal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        소통 모임 소개                    
+                    </div>
+                    <div class="modal-body" style="text-align: center;">
+                        월 1 회 개최 (2020 년도는 코로나 19 로 비대면 모임으로 대체)
+                        <img src="../static/img/event/1-3.png" alt="" id="image" style="width:471px; height:223px;">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="modal" id="modal1" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        캠페인 소개                   
+                    </div>
+                    <div class="modal-body" style="text-align: center;">
+                        <p class="card-text"> 투병 중에 있는 환자 본인이 완치 후 가고 싶은 여행지를 본 
+                        법인에
+                        밝히고 질병이 완치 되고, 1 년 후 여행에 동행하는 챌린지 프로그램으로 초기에는
+                        추적검사 중인 친구들의 버킷리스트를 취합,선발을 통해 여행 버킷 챌린지를
+                        시행하고자 합니다.<br>국내의 경우 반기당 1 회, 해외의 경우 연 1 회를 목표로 합니다. 
+                        <br>(해당인원의 스토리를 포토북 또는 영상으로 제작하여 바이럴 진행)</p> 
+                        <img src="../static/img/event/2-2.png" alt="" id="image" style="width:395px; height:247px;">
+                        <img src="../static/img/event/2-3.png" alt="" id="image" style="width:379px; height:245px;">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
 
   </div>
   <!-- /.container -->
 
- 
-
+  
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
