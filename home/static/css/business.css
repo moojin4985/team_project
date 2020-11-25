@@ -6,7 +6,7 @@
 }
 
 .b_intro_txt {
-    width: 320px;
+    width: 330px;
     padding-top: 73px;
     font-size: 22px;
     line-height: 34px;
@@ -74,10 +74,4 @@
 
 .b_cont_wrap+.b_cont_wrap .b_cont_top {
     border-top: 1px solid #e6e6e6;
-}
-
-.clear_both {
-    clear: both;
-    content: '';
-    display: invisible;
 }

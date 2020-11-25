@@ -24,6 +24,10 @@
     width: 100%;
   }
 
+  .b_intro_txt {
+    padding-left: 5px;
+  }
+
   .b_tit {
     padding-left: 5px;
     width: 200px;
@@ -137,6 +141,10 @@
   .b_cont_wrap {
     max-width: 1160px;
     width: 100%;
+  }
+
+  .b_intro_txt{
+    padding-left: 5px;
   }
 
   .b_tit {
@@ -309,8 +317,9 @@
 
   /* business responsive */
   .b_intro_txt {
-    max-width: 320px;
-    width: 100%
+    max-width: 330px;
+    width: 100%;
+    padding-left: 5px;
   }
 
   .b_cont_wrap {
@@ -373,6 +382,10 @@
   .b_cont_wrap {
     max-width: 1160px;
     width: 100%;
+  }
+
+  .b_intro_txt {
+    padding-left: 5px;
   }
 
   .b_tit {
