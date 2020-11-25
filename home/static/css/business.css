@@ -60,7 +60,7 @@
     color: #666;
 }
 
-.b_cont3 {
+.b_cont_bot {
     margin-bottom: 60px;
 }
 
@@ -68,6 +68,10 @@
     margin-top: 60px;
 }
 
-.b_cont_wrap + .b_cont_wrap .b_cont {
+.b_cont_wrap+.b_cont_wrap .b_cont_top {
     border-top: 1px solid #e6e6e6;
+}
+
+.clear_both {
+    clear: both;
 }
