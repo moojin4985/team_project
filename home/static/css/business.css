@@ -1,10 +1,12 @@
+@charset "utf-8";
 
 .business_wrap {
- max-width: 1160px; margin: 0 auto;
+    max-width: 1160px;
+    margin: 0 auto;
 }
 
-.b_intro_txt
-{   display: block;
+.b_intro_txt {
+    display: block;
     padding-top: 73px;
     font-size: 22px;
     line-height: 34px;
@@ -12,14 +14,18 @@
     font-weight: bold;
 }
 
-.business_main img { display: block;
-  max-width: 1160px;
-  width: 100%;
-  margin-top: 100px;
+.business_main img {
+    display: block;
+    max-width: 1160px;
+    width: 100%;
+    margin-top: 100px;
 }
 
 .b_cont_wrap {
     position: relative;
+    width: 1160px;
+    margin: 0 auto;
+    clear: both;
 }
 
 .b_tit {
@@ -34,11 +40,34 @@
     vertical-align: top;
 }
 
-.b_cont {float: right;
-width: 860px;
-padding-top: 53px;
-font-size: 18px;
-line-height: 30px;
-color: #1e1e1e;
-display: block;
+.b_cont {
+    float: right;
+    width: 860px;
+    padding-top: 53px;
+    display: block;
+}
+
+.b_cont .bc_t {
+    font-size: 18px;
+    line-height: 30px;
+    color: #1e1e1e;
+}
+
+.b_cont p{
+    padding-top: 19px;
+    line-height: 26px;
+    font-size: 16px;
+    color: #666;
+}
+
+.b_cont3 {
+    margin-bottom: 60px;
+}
+
+.b_cont_wrap + .b_cont_wrap {
+    margin-top: 60px;
+}
+
+.b_cont_wrap + .b_cont_wrap .b_cont {
+    border-top: 1px solid #e6e6e6;
 }
