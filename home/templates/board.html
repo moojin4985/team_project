@@ -8,7 +8,7 @@
 <table>
     {% for list in postlist %}
     <ul>
-        <li><a href="{% url 'viewboard' pk=list.pk %}">{{list.title}} <span>{{list.pub_date}}</span></a></li>
+        <li><a href="{% url 'viewboard' pk=list.pk %}"></a>{{list.title}} <span>{{list.pub_date}}</span></a></li>
     </ul>
     {% endfor %}
     <!--<button><a href="newpost/">글쓰기</a></button>-->
