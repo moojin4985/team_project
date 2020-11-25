@@ -16,6 +16,7 @@ class Post(models.Model):
         return self.title
 
 class Support(models.Model):
+    auther = models.ForeignKey('auth.User', on_delete=models.CASCADE)
     name = models.CharField(max_length=50)
 
     phone_regex = RegexValidator(regex=r"^[0-9]{3}-[0-9]{3,4}-[0-9]{4}$", message="")

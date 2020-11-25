@@ -78,7 +78,7 @@
         <!--//아코디언 메뉴-->
         <div class="col-md-6 col-sm-6 col-xs-12">
             <h5 class="text-center">후원자 정보 기록 및 문의 사항</h5>
-            <form method="POST" >
+            <form method="POST">
                 {% csrf_token %}
                 <div class="form-group">
                     <label for="inputName">성명</label>
@@ -94,7 +94,7 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlTextarea1">내용</label>
-                    <textarea class="form-control" name="text" id="exampleFormControlTextarea1" placeholder="후원 내용 및 문의 사항"
+                    <textarea class="form-control" name="contents" id="exampleFormControlTextarea1" placeholder="후원 내용 및 문의 사항"
                         rows="3"></textarea>
                 </div>
                 <div class="form-group form-check">

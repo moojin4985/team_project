@@ -2,7 +2,7 @@ from django.shortcuts import render, loader
 
 # Create your views here.
 from django.http import HttpResponse, HttpResponseRedirect
-from .models import Post
+from .models import Post, Support
 
 
 def home(request):
@@ -30,6 +30,14 @@ def news(request):
 
 
 def support(request):
+    if request.method == 'POST':
+        support = Support.objects.create(
+            name = request.POST['name'],
+            phone_number = request.POST['phone_number'],
+            email = request.POST['email'],
+            contents = request.POST['contents'],
+        )
+        return HttpResponseRedirect('/home/board/')
     return render(request, "support.html")
 
 
@@ -47,24 +55,11 @@ def map(request):
 
 def board(request):
     postlist = Post.objects.all()
-    return render(request, "board.html", {'postlist': postlist})
-
-def supportboard(request):
     supportlist = Support.objects.all()
-    return render(request, "board.html", {'supportlist': supportlist})
+    return render(request, "board.html", {'postlist': postlist, 'supportlist': supportlist})
 
 
 def viewboard(request, pk):
     post = Post.objects.get(pk=pk)
     return render(request, "viewboard.html", {'post': post})
 
-def support(request):
-    if request.method == 'POST':
-        new_article=Post.objects.create(
-            name=request.POST['name'],
-            phone_regex=request.POST['phone_number'],
-            email=request.POST['email'],
-            text=request.POST['text'],
-        )
-        return HttpResponseRedirect('/home/board/')
-    return render(request, 'support.html')
