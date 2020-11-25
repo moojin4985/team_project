@@ -1,0 +1,17 @@
+server {
+        listen 80;
+        server_name 34.64.199.233;
+
+        location /static/ {
+                root /home/hmj977_email/web/static;
+        }
+
+        location /media/ {
+                root /home/hmj977_email/web/media;
+        }
+
+        location / {
+                include proxy_params;
+                proxy_pass http://unix:/home/hmj977_email/web/run/gunicorn.sock;
+        }
+}
