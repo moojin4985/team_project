@@ -6,7 +6,7 @@
 }
 
 .b_intro_txt {
-    width: 320px;
+    display: block;
     padding-top: 73px;
     font-size: 22px;
     line-height: 34px;
@@ -25,15 +25,7 @@
     position: relative;
     width: 1160px;
     margin: 0 auto;
-}
-
-.b_cont_wrap:after {
-    display: block;
-    visibility: hidden;
-    height: 0;
-    font-size: 0;
     clear: both;
-    content: '';
 }
 
 .b_tit {
@@ -68,6 +60,10 @@
     color: #666;
 }
 
+.b_cont_bot {
+    margin-bottom: 60px;
+}
+
 .b_cont_wrap + .b_cont_wrap {
     margin-top: 60px;
 }
@@ -78,6 +74,4 @@
 
 .clear_both {
     clear: both;
-    content: '';
-    display: invisible;
 }
