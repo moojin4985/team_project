@@ -18,30 +18,10 @@ class Post(models.Model):
 class Support(models.Model):
     name = models.CharField(max_length=50)
 
-<<<<<<< HEAD
     phone_regex = RegexValidator(regex=r"^[0-9]{3}-[0-9]{3,4}-[0-9]{4}$", message="")
     phone_number = models.CharField(validators=[phone_regex], max_length=17, blank=True) 
     
     email = models.EmailField(max_length=128,blank=True)
-=======
-    phone_regex = RegexValidator(regex=r'''(
-    (\d{2}|\(\d{2}\)|\d{3}|\(\d{3}\))?      # 지역번호 : 2자리 또는 3자리, () 포함, 0번또는 1번  
-    (|-|\.)?                                # 구분자 : 하이푼 또는 . 0번 또는 1번  
-    (\d{3}|\d{4})                           # 3자리 또는 4자리 숫자  
-    (\s|-|\.)                               # 구분자  
-    (\d{4})                                 # 4자리 숫자  
-    )''', message="")
-    phone_number = models.CharField(validators=[phone_regex], max_length=17, blank=True) 
-
-    email_regex = RegexValidator(regex=r'''(  
-    ([a-zA-Z0-9._%+-]+)      # 사용자명
-    @                        # @
-    ([a-zA-Z0-9.-]+)         # 도메인 이름
-    (\.[a-zA-Z]{2,4})        # 최상위 도메인
-    )''', message="") 
-    email = models.CharField(validators=[email_regex], max_length=200, blank=True) 
-
->>>>>>> parent of cbfe99b (Update models.py)
     contents = models.TextField(blank=True)
     pub_date = models.DateTimeField(default = timezone.now)
 
