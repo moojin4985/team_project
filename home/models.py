@@ -35,7 +35,7 @@ class Support(models.Model):
     )''', message="") 
     email = models.CharField(validators=[email_regex], max_length=200, blank=True) 
 
-    contents = models.TextField()
+    contents = models.TextField(blank=True)
 
     def __str__(self):
         return self.name
