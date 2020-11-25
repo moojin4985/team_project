@@ -18,13 +18,12 @@ class Post(models.Model):
 class Support(models.Model):
     name = models.CharField(max_length=50)
 
-    phone_regex = RegexValidator(regex=r'\d{2,3}-\d{3,4}-\d{4}', message="")
+    phone_regex = RegexValidator(regex=r"^[0-9]{3}-[0-9]{3,4}-[0-9]{4}$", message="")
     phone_number = models.CharField(validators=[phone_regex], max_length=17, blank=True) 
-
-    email_regex = RegexValidator(regex=r'[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}', message="") 
-    email = models.CharField(validators=[email_regex], max_length=200, blank=True) 
-
+    
+    email = models.EmailField(max_length=128,blank=True)
     contents = models.TextField(blank=True)
+    pub_date = models.DateTimeField(default = timezone.now)
 
     def __str__(self):
         return self.name

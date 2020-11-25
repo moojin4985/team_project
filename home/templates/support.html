@@ -78,22 +78,23 @@
         <!--//아코디언 메뉴-->
         <div class="col-md-6 col-sm-6 col-xs-12">
             <h5 class="text-center">후원자 정보 기록 및 문의 사항</h5>
-            <form role="form">
+            <form method="POST" >
+                {% csrf_token %}
                 <div class="form-group">
                     <label for="inputName">성명</label>
-                    <input type="text" class="form-control" id="inputName" placeholder="이름을 입력해 주세요">
+                    <input type="text" class="form-control" name="name" id="inputName" placeholder="이름을 입력해 주세요">
                 </div>
                 <div class="form-group">
                     <label for="inputMobile">연락처</label>
-                    <input type="tel" class="form-control" id="inputMobile" placeholder="휴대폰번호를 입력해 주세요">
+                    <input type="tel" class="form-control" name="phone_number" id="inputMobile" placeholder="휴대폰번호를 입력해 주세요">
                 </div>
                 <div class="form-group">
                     <label for="InputEmail">이메일 주소</label>
-                    <input type="email" class="form-control" id="InputEmail" placeholder="이메일 주소를 입력해주세요">
+                    <input type="email" class="form-control" name="email" id="InputEmail" placeholder="이메일 주소를 입력해주세요">
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlTextarea1">내용</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="후원 내용 및 문의 사항"
+                    <textarea class="form-control" name="text" id="exampleFormControlTextarea1" placeholder="후원 내용 및 문의 사항"
                         rows="3"></textarea>
                 </div>
                 <div class="form-group form-check">

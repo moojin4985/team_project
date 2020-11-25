@@ -62,7 +62,7 @@ def support(request):
     if request.method == 'POST':
         new_article=Post.objects.create(
             name=request.POST['name'],
-            phone_number=request.POST['phone_number'],
+            phone_regex=request.POST['phone_number'],
             email=request.POST['email'],
             text=request.POST['text'],
         )
