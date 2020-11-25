@@ -22,8 +22,8 @@ class Support(models.Model):
     phone_regex = RegexValidator(regex=r"^[0-9]{3}-[0-9]{3,4}-[0-9]{4}$", message="")
     phone_number = models.CharField(validators=[phone_regex], max_length=17, blank=True) 
     
-    email = models.EmailField(max_length=128,blank=True)
-    contents = models.TextField(blank=True)
+    email = models.EmailField(max_length=128, blank=True)
+    contents = models.TextField(max_length=256, blank=True)
     pub_date = models.DateTimeField(default = timezone.now)
 
     def __str__(self):

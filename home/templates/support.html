@@ -2,6 +2,36 @@
 {% extends 'base.html' %}
 
 {%block content %}
+<script>
+    function checkphone(inputMobile) {
+         var pattern = /^\d{3}-\d{3,4}-\d{4}$/;
+         return pattern.test(inputMobile)
+    }
+
+    function checkfrom() {
+        if ($.trim($("#inputName").val()) == "") {
+            alert("이름을 입력해주세요")
+            $("#inputName").focus();
+            return false;
+        }
+        if(!checkphone($.trim($("#inputMobile").val()))){
+            alert("연락처를 올바르게 입력해주세요")
+            $("#inputMobile").focus();
+            return false;
+        }
+        if($.trim($("#exampleFormControlTextarea1").val()) == "") {
+            alert("내용을 입력해주세요")
+            $("#exampleFormControlTextarea1").focus();
+            return false;
+        }
+        if (!$("input:checked[id='exampleCheck1']").is(":checked")) {
+            alert("개인정보 수집에 동의해주세요");
+            return false;
+        }
+    
+    }
+
+</script>
 <div class="container">
     <div class="page-header text-center">
         <div class="col-md-12 col-md-offset-3">
@@ -78,7 +108,7 @@
         <!--//아코디언 메뉴-->
         <div class="col-md-6 col-sm-6 col-xs-12">
             <h5 class="text-center">후원자 정보 기록 및 문의 사항</h5>
-            <form method="POST" role="form">
+            <form method="POST" name="stip" onsubmit="return checkfrom()">
                 {% csrf_token %}
                 <div class="form-group">
                     <label for="inputName">성명</label>
@@ -94,18 +124,16 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlTextarea1">내용</label>
-                    <textarea class="form-control" name="contents" id="exampleFormControlTextarea1" placeholder="후원 내용 및 문의 사항"
+                    <textarea class="form-control" name="contents" id="exampleFormControlTextarea1" placeholder="후원 내용을 입력해주세요"
                         rows="3"></textarea>
                 </div>
                 <div class="form-group form-check">
-                    <input type="checkbox" class="form-check-input" name="contents" id="exampleCheck1">
+                    <input type="checkbox" class="form-check-input" name="allow" id="exampleCheck1">
                     <label class="form-check-label" for="exampleCheck1">개인정보 수집 동의</label>
-                    <p style="font-size: 13px;">후원자님의 인적사항을 기록하기 위해 또는 문의사항 접수 및 처리를 위해 위와 같이 개인정보를 수집합니다.<br>
-                        개인정보 수집 동의를 거부할 수있으며, 거부시 문의가 불가할 수 있습니다.</p>
+                    <p style="font-size: 13px;">후원자님의 인적사항을 기록하기 위해 또는 문의사항 접수 및 처리를 위해 위와 같이 개인정보를 수집합니다.</p>
                 </div>
                 <div class="form-group text-center">
-                    <button type="submit" id="join-submit" class="btn btn-primary"
-                        onclick="javascript:btn('전송이 완료되었습니다.' )">
+                    <button type="submit" id="join-submit" class="btn btn-primary">
                         보내기<i class="fa fa-check spaceLeft"></i>
                     </button>
                     <button type="reset" class="btn btn-warning">

@@ -37,7 +37,7 @@ def support(request):
             email = request.POST['email'],
             contents = request.POST['contents'],
         )
-        return HttpResponseRedirect('/home/board/')
+        return HttpResponseRedirect('/home/support')
     return render(request, "support.html")
 
 
