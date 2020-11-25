@@ -50,7 +50,7 @@ def board(request):
     return render(request, "board.html", {'postlist': postlist})
 
 def supportboard(request):
-    supportlist = support.objects.all()
+    supportlist = Support.objects.all()
     return render(request, "board.html", {'supportlist': supportlist})
 
 
@@ -66,5 +66,5 @@ def support(request):
             email_regex=request.POST['email'],
             text=request.POST['text'],
         )
-        #return HttpResponseRedirect('/home/board/')
+        return HttpResponseRedirect('/home/board/')
     return render(request, 'support.html')
