@@ -51,7 +51,7 @@
                             5. 온라인/오프라인 홍보 브로셔 발간<br>
                             6. 홍보 영상 제작/배포<br>
                             7. 기타 법인의 목적 달성에 필요한 사업 등에 사용됩니다.<br>
-                            자세한 사항은 <a href="http://127.0.0.1:8000/home/business">사업소개</a>에서 보실 수 있습니다.
+                            자세한 사항은 <a href="http://127.0.0.1:8000/home/business">사업소개</a>에서 보실 수있습니다.
                         </div>
                     </div>
                 </div>
@@ -78,19 +78,19 @@
         <!--//아코디언 메뉴-->
         <div class="col-md-6 col-sm-6 col-xs-12">
             <h5 class="text-center">후원자 정보 기록 및 문의 사항</h5>
-            <form method="POST">
+            <form method="POST" role="form">
                 {% csrf_token %}
                 <div class="form-group">
                     <label for="inputName">성명</label>
-                    <input type="text" class="form-control" name="name" id="inputName" placeholder="이름을 입력해 주세요">
+                    <input type="text" class="form-control" id="inputName" placeholder="이름을 입력해 주세요">
                 </div>
                 <div class="form-group">
                     <label for="inputMobile">연락처</label>
-                    <input type="tel" class="form-control" name="phone_number" id="inputMobile" placeholder="휴대폰번호를 입력해 주세요">
+                    <input type="tel" class="form-control" id="inputMobile" placeholder="휴대폰번호를 입력해 주세요">
                 </div>
                 <div class="form-group">
                     <label for="InputEmail">이메일 주소</label>
-                    <input type="email" class="form-control" name="email" id="InputEmail" placeholder="이메일 주소를 입력해주세요">
+                    <input type="email" class="form-control" id="InputEmail" placeholder="이메일 주소를 입력해주세요">
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlTextarea1">내용</label>
@@ -104,7 +104,8 @@
                         개인정보 수집 동의를 거부할 수있으며, 거부시 문의가 불가할 수 있습니다.</p>
                 </div>
                 <div class="form-group text-center">
-                    <button type="submit" id="join-submit" class="btn btn-primary" onclick="javascript:btn('전송이 완료되었습니다.' )">
+                    <button type="submit" id="join-submit" class="btn btn-primary"
+                        onclick="javascript:btn('전송이 완료되었습니다.' )">
                         보내기<i class="fa fa-check spaceLeft"></i>
                     </button>
                     <button type="reset" class="btn btn-warning">
@@ -120,6 +121,6 @@
 <script>
     function btn(sample) {
         alert(sample);
-    } 
+    }
 </script>
 {%endblock%}
