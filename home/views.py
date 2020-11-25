@@ -49,25 +49,22 @@ def board(request):
     postlist = Post.objects.all()
     return render(request, "board.html", {'postlist': postlist})
 
+def supportboard(request):
+    supportlist = support.objects.all()
+    return render(request, "board.html", {'supportlist': supportlist})
+
 
 def viewboard(request, pk):
     post = Post.objects.get(pk=pk)
     return render(request, "viewboard.html", {'post': post})
 
-
-def newpost(request):
+def support(request):
     if request.method == 'POST':
-        if request.POST['mainphoto']:
-            new_article=Post.objects.create(
-                title=request.POST['title'],
-                text=request.POST['text'],
-                mainphoto=request.POST['mainphoto'],
-            )
-        else:
-            new_article=Post.objects.create(
-                title=request.POST['title'],
-                text=request.POST['text'],
-                mainphoto=request.POST['mainphoto'],
+        new_article=Post.objects.create(
+            name=request.POST['name'],
+            phone_regex=request.POST['phone_number'],
+            email_regex=request.POST['email'],
+            text=request.POST['text'],
         )
-        return HttpResponseRedirect('/home/board/')
-    return render(request, 'newpost.html')
+        #return HttpResponseRedirect('/home/board/')
+    return render(request, 'support.html')
