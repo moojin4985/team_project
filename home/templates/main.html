@@ -54,7 +54,7 @@
                   </button>
 
               <!-- Brand -->
-              <a class="navbar-brand page-scroll sticky-logo" href="main">
+              <a class="navbar-brand page-scroll sticky-logo" href="{% url 'home' %}">
                 <h1><span></span>KYCA</h1>
               </a>
             </div>
@@ -62,7 +62,7 @@
             <div class="collapse navbar-collapse main-menu bs-example-navbar-collapse-1" id="navbar-example">
               <ul class="nav navbar-nav navbar-right">
                 <li class="active">
-                  <a class="page-scroll" href="main">Home</a>
+                  <a class="page-scroll" href="{% url 'home' %}">Home</a>
                 </li>
                 <li>
                   <a class="page-scroll" href="establish">About</a>
@@ -373,11 +373,13 @@
   <script src="/static/lib/parallax/parallax.js"></script>
   <script src="/static/lib/easing/easing.min.js"></script>
   <script src="/static/lib/nivo-slider/js/jquery.nivo.slider.js" type="text/javascript"></script>
-  <script src="/static/lib/jquery.appear.js"></script>
-  <script src="/static/lib/isotope.pkgd.min.js"></script>
+  <script src="/static/lib/appear/jquery.appear.js"></script>
+  <script src="/static/lib/isotope/isotope.pkgd.min.js"></script>
 
   <!-- Contact Form JavaScript File -->
-  <script src="contactform/contactform.js"></script>
+  <!--
+    <script src="contactform/contactform.js"></script>
+  -->
   <!--icons-->
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   <script src="/static/js/main.js"></script>
