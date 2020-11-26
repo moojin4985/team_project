@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 .b_intro_txt {
-    width: 330px;
+    /* width: 330px; */
     padding-top: 73px;
     font-size: 22px;
     line-height: 34px;
@@ -10,32 +10,11 @@
 }
 
 .business_main img {
-    display: block;
-    max-width: 1140px;
-    width: 100%;
     margin-top: 100px;
 }
 
-.b_cont_wrap {
-    position: relative;
-    width: 1110px;
-    margin: 0 auto;
-}
-
-.b_cont_wrap:after {
-    display: block;
-    visibility: hidden;
-    height: 0;
-    font-size: 0;
-    clear: both;
-    content: '';
-}
-
 .b_tit {
-    float: left;
-    width: 270px;
-    display: block;
-    padding: 53px 40px 0 0;
+    padding-top: 53px;
     font-size: 18px;
     font-weight: bold;
     line-height: 30px;
@@ -44,10 +23,7 @@
 }
 
 .b_cont {
-    float: right;
-    width: 840px;
     padding-top: 53px;
-    display: block;
 }
 
 .b_cont .bc_t {
@@ -73,4 +49,8 @@
 
 .b_cont_bot1 {
     margin-bottom: 60px;
+}
+
+.icon_arrowup {
+    text-align: center;
 }
