@@ -2,6 +2,7 @@ from django.shortcuts import render, loader
 
 # Create your views here.
 from django.http import HttpResponse, HttpResponseRedirect
+from django.db.models import Q
 from .models import Post, Support
 
 
@@ -36,7 +37,7 @@ def support(request):
             phone_number = request.POST['phone_number'],
             email = request.POST['email'],
             contents = request.POST['contents'],
-        )
+        ) 
         return HttpResponseRedirect('/home/support')
     return render(request, "support.html")
 
@@ -52,11 +53,35 @@ def event(request):
 def map(request):
     return render(request, "map.html")
 
-
+#@csrf_exempt
 def board(request):
+    """
+    # 검색기능
+    try:
+        search_option = request.POST['search_option']
+    except:
+        search_option = 'writer'
+    try:
+        search = request.POST['search']
+    except:
+        search = ''    
+    
+    supportCount = Support.objects.count()
+    
+    if search_option == 'writer': 
+        Searchlist = Support.objects.filter( Q(name__contains = search)).order_by('-idx')
+    elif search_option == 'phone_number': 
+        Searchlist = Support.objects.filter( Q(phone_number__contains = search)).order_by('-idx')
+    elif search_option == 'email': 
+        Searchlist = Support.objects.filter( Q(email__contains = search)).order_by('-idx')
+    
+    supportlist = Post.objects.all().order_by('-id') 
+    'supportlist': supportlist, 'supportCount':supportCount, 'search_option':search_option, 'search':search
+    """
+
     postlist = Post.objects.all()
-    supportlist = Support.objects.all()
-    return render(request, "board.html", {'postlist': postlist, 'supportlist': supportlist})
+    supportall = Support.objects.all()
+    return render(request, "board.html", {'postlist': postlist, 'supportall':supportall, })
 
 
 def viewboard(request, pk):
