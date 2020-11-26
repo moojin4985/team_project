@@ -3,11 +3,11 @@ server {
         server_name 34.64.199.233;
 
         location /static/ {
-                root /home/hmj977_email/web/static;
+                alias /home/hmj977_email/web/static/;
         }
 
         location /media/ {
-                root /home/hmj977_email/web/media;
+                alias /home/hmj977_email/web/media/;
         }
 
         location / {

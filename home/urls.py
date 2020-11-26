@@ -14,7 +14,7 @@ urlpatterns = [
     # path('team', views.team, name='team'),
     path('event', views.event, name='event'),
     path('map', views.map, name='map'),
-    path('board/', views.board, name='board'),
-    path('board/<int:pk>/', views.viewboard, name='viewboard'),
-    #path('board/newpost/', views.newpost, name='newpost'),
+    # path('board/', views.board, name='board'),
+    # path('board/<int:pk>/', views.viewboard, name='viewboard'),
+    # path('board/newpost/', views.newpost, name='newpost'),
 ]

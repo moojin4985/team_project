@@ -15,18 +15,18 @@ import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-ROOT_DIR = os.path.dirname(BASE_DIR)
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '&%k^s3mn&jufb5t*3%fg^!^25597(jzn^4h1^3hcpqr2s!2o%5'
-# SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '&%k^s3mn&jufb5t*3%fg^!^25597(jzn^4h1^3hcpqr2s!2o%5')
+# SECRET_KEY = '&%k^s3mn&jufb5t*3%fg^!^25597(jzn^4h1^3hcpqr2s!2o%5'
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '&%k^s3mn&jufb5t*3%fg^!^25597(jzn^4h1^3hcpqr2s!2o%5')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+# DEBUG = True
+DEBUG = bool(os.environ.get('DJANGO_DEBUG', False))
 
 ALLOWED_HOSTS = ['34.64.199.233']
 
@@ -50,13 +50,13 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    # 'csp.middleware.CSPMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'csp.middleware.CSPMiddleware',
 ]
-"""
+
 # SSL/HTTPS 헤더 설정
-SECURE_SSL_REDIRECT = True
+SECURE_SSL_REDIRECT = False
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # HSTS
@@ -70,7 +70,15 @@ SECURE_CONTENT_TYPE_NOSNIFF = True
 # X-XSS-Proection
 SECURE_BROWSER_XSS_FILTER = True
 
-# CSP_DEFAULT_SRC = ("'self'")
+CSP_DEFAULT_SRC = ("'self'", "'unsafe-inline'", "https://fonts.googleapis.com", "http://*.daumcdn.net")
+CSP_SCRIPT_SRC = ("'self'", "'unsafe-inline'")
+CSP_SCRIPT_SRC_ELEM = ("'self'", "'unsafe-inline'","https://fonts.googleapis.com", "https://kit.fontawesome.com",
+                    "https://code.jquery.com", "https://cdn.jsdelivr.net", "http://cdnjs.cloudflare.com", "http://*.daumcdn.net")
+CSP_MEDIA_SRC = ("'self'", "https://t1.kakaocdn.net")
+CSP_CONNECT_SRC = ("'self'", "https://ka-f.fontawesome.com")
+CSP_IMG_SRC =  ("'self'", "https://dimg.donga.com", "http://cdn.kormedi.com", "http://img.hani.co.kr", "http://bycherry1.cafe24.com", "https://stlog1-local.kakao.com", "http://*.daumcdn.net")
+CSP_FONT_SRC = ("'self'", "https://fonts.gstatic.com", "https://ka-f.fontawesome.com")
+CSP_FRAME_SRC = ("'self'", "https://www.youtube.com")
 
 CORS_ORIGIN_ALLOW_ALL = False
 CORS_ORIGIN_WHITELIST = ['localhost']
@@ -95,7 +103,7 @@ CSRF_COOKIE_SECURE = True
 # SameSite
 SESSION_COOKIE_SAMESITE = 'Lax'
 CSRF_COOKIE_SAMESITE = 'Lax'
-"""
+
 
 ROOT_URLCONF = 'mysite.urls'
 
