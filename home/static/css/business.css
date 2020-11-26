@@ -1,10 +1,5 @@
 @charset "utf-8";
 
-.business_wrap {
-    max-width: 1160px;
-    margin: 0 auto;
-}
-
 .b_intro_txt {
     width: 330px;
     padding-top: 73px;
@@ -16,14 +11,14 @@
 
 .business_main img {
     display: block;
-    max-width: 1160px;
+    max-width: 1140px;
     width: 100%;
     margin-top: 100px;
 }
 
 .b_cont_wrap {
     position: relative;
-    width: 1160px;
+    width: 1110px;
     margin: 0 auto;
 }
 
@@ -38,7 +33,7 @@
 
 .b_tit {
     float: left;
-    width: 300px;
+    width: 270px;
     display: block;
     padding: 53px 40px 0 0;
     font-size: 18px;
@@ -50,7 +45,7 @@
 
 .b_cont {
     float: right;
-    width: 860px;
+    width: 840px;
     padding-top: 53px;
     display: block;
 }
