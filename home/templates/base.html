@@ -43,10 +43,10 @@
 
     <!-- Responsive Stylesheet File -->
     <link href="/static/css/responsive.css" rel="stylesheet">
-    
+
     <!-- Activity Theme -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
-	<link href="/static/css/activity.css" rel="stylesheet">
+    <link href="/static/activity.css" rel="stylesheet">
 
     <!-- Google Fonts -->
     <link
@@ -59,24 +59,24 @@
 <body data-spy="scroll" data-target="#navbar-example" style="padding-top:0;">
     <header style="margin-bottom: 20px; background-color: #000;">
         <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-dark" style="margin-top: 0;"> <a href="{% url 'home' %}"
-                class="navbar-brand" style="display: block; width: 150px; height: 50px;"><img src="/static/img/logo_Reverse.png"
-                    alt="또봄 로고" style="width: 100%;"></a>
-            <!-- Toggle Button --> <button class="navbar-toggler" type="button" data-toggle="collapse"
-                data-target="#collapsibleNavbar"> <span class="navbar-toggler-icon"></span> </button>
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                <ul class="navbar-nav ">
-                    <li class="nav-item"><a href="{% url 'establish' %}" class="nav-link">설립취지</a></li>
-                    <li class="nav-item"><a href="{% url 'business' %}" class="nav-link">사업소개</a></li>
-                    <li class="nav-item"><a href="{% url 'news' %}" class="nav-link">뉴스</a></li>
-                    <li class="nav-item"><a href="{% url 'event' %}" class="nav-link">이벤트</a></li>
-                    <li class="nav-item"><a href="{% url 'activity' %}" class="nav-link">활동 모습</a></li>
-                    <li class="nav-item"><a href="{% url 'scontent' %}" class="nav-link">소셜 컨텐츠</a></li>
-                    <li class="nav-item"><a href="{% url 'support' %}" class="nav-link">후원</a></li>
-                    <li class="nav-item"><a href="{% url 'map' %}" class="nav-link">오시는 길</a></li>
-                </ul>
-            </div>
-        </nav>
+            <nav class="navbar navbar-expand-sm navbar-light" style="margin-top: 0;"> <a href="{% url 'home' %}"
+                    class="navbar-brand" style="display: block; width: 150px; height: 50px;"><img
+                        src="/static/img/logo.png" alt="또봄 로고" style="width: 100%;"></a>
+                <!-- Toggle Button --> <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#collapsibleNavbar"> <span class="navbar-toggler-icon"></span> </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a href="{% url 'establish' %}" class="nav-link">설립취지</a></li>
+                        <li class="nav-item"><a href="{% url 'business' %}" class="nav-link">사업소개</a></li>
+                        <li class="nav-item"><a href="{% url 'news' %}" class="nav-link">뉴스</a></li>
+                        <li class="nav-item"><a href="{% url 'event' %}" class="nav-link">이벤트</a></li>
+                        <li class="nav-item"><a href="{% url 'activity' %}" class="nav-link">활동 모습</a></li>
+                        <li class="nav-item"><a href="{% url 'scontent' %}" class="nav-link">소셜 컨텐츠</a></li>
+                        <li class="nav-item"><a href="{% url 'support' %}" class="nav-link">후원</a></li>
+                        <li class="nav-item"><a href="{% url 'map' %}" class="nav-link">오시는 길</a></li>
+                    </ul>
+                </div>
+            </nav>
         </div>
     </header>
     <!--//header-->
@@ -86,29 +86,23 @@
 
     <!-- Start Footer bottom Area -->
     <hr>
-    <footer style="background-color:black; color: #fff;">
-        <section id="footer">
-            <div class="container">
-                <div class="row text-center">
-                    <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5" style="padding-bottom: 30px;">
-                        <p style="font-size:13px">주소 : 서울특별시 강남구 테헤란로 2길 8, 4층 17호(역삼동, 마이워크 스페이스) “한국청년암협회 또봄”<br>
-                        연락처 : 010-9414-4879 | 대표 : 이정훈
-                        </p>
-                        <ul class="list-unstyled list-inline social text-center">
-                            <li class="list-inline-item"><a href="https:www.facebook.com/iseeua.page" title="페이스북"
-                                    target="blank"><i class="fa fa-facebook"></i></a></li>
-                            <li class="list-inline-item"><a href="https:www.instagram.com/iseeuagain/" title="인스타그램"
-                                    target="blank"><i class="fa fa-instagram"></i></a></li>
-                            <li class="list-inline-item"><a
-                                    href="https://www.youtube.com/channel/UCf-FxfM4HXA7oBDmLu_P7AA" title="유튜브"
-                                    target="blank"><i class="fa fa-play"></i></a></li>
-                        </ul>
-                        Copyright © 한국청년암협회 또봄 Corp. All rights reserved.
-                    </div>
-                </div>
-            </div>
-        </section>
+    <footer class="bg-dark text-white text-center py-5 mt-3">
+        <div class="container">
+            <p style="font-size:13px">주소 : 서울특별시 강남구 테헤란로 2길 8, 4층 17호(역삼동, 마이워크 스페이스) “한국청년암협회 또봄”<br>
+                연락처 : 010-9414-4879 | 대표 : 이정훈
+            </p>
+            <ul class="list-unstyled list-inline social text-center">
+                <li class="list-inline-item"><a href="https:www.facebook.com/iseeua.page" title="페이스북" target="blank"><i
+                            class="fa fa-facebook"></i></a></li>
+                <li class="list-inline-item"><a href="https:www.instagram.com/iseeuagain/" title="인스타그램"
+                        target="blank"><i class="fa fa-instagram"></i></a></li>
+                <li class="list-inline-item"><a href="https://www.youtube.com/channel/UCf-FxfM4HXA7oBDmLu_P7AA"
+                        title="유튜브" target="blank"><i class="fa fa-play"></i></a></li>
+            </ul>
+            Copyright © 한국청년암협회 또봄 Corp. All rights reserved.
+        </div>
     </footer>
     <!--//end footer area-->
 </body>
+
 </html>
