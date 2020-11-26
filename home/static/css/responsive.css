@@ -4,9 +4,9 @@
   }
 }
 
-/* Normal desktop :992px. */
+/* Normal desktop :999px. */
 
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 999px) and (max-width: 1169px) {
   .slider-content {
     padding: 146px 0;
   }
@@ -36,7 +36,6 @@
 
   /* end business.html responsive */
 }
-
 /* Tablet desktop :768px. */
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -132,6 +131,8 @@
   .search-option input {
     width: 67%;
   }
+}
+
 
   /* business responsive */
   .b_cont_wrap {
@@ -345,7 +346,7 @@
 
 /* Large Mobile :480px. */
 
-@media only screen and (min-width: 480px) and (max-width: 767px) {
+@media only screen and (min-width: 480px) and (max-width: 999px) {
   .submitbtn {
     float: none;
     width: 99.8%;

@@ -11,6 +11,7 @@
 
   <!-- Bootstrap CSS File -->
   <link href="/static/css/bootstrap-grid.css" rel="stylesheet">
+ 
   
   <!-- Libraries CSS Files -->
   <link href="/static/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -29,75 +30,37 @@
 
   <!-- Responsive Stylesheet File -->
   <link href="/static/css/responsive.css" rel="stylesheet">
+  <!-- responsive nav -->
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
- 
-  
 </head>
 
 <body data-spy="scroll" data-target="#navbar-example">
-  
     <header>
-      <!-- header-area start -->
-      <div id="sticker" class="header-area">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12 col-sm-12">
-              <!-- Navigation -->
-              <nav class="navbar navbar-default">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                  </button>
-
-              <!-- Brand -->
-              <a class="navbar-brand page-scroll sticky-logo" href="{% url 'home' %}">
-                <h1><span></span>KYCA</h1>
-              </a>
+      <nav class="navbar">
+        <div class="content">
+          <div class="logo">
+            <a href="{% url 'home' %}">KYCA</a>
+          </div>
+          <ul class="menu-list">
+            <div class="icon cancel-btn">
+              <i class="fas fa-times"></i>
             </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse main-menu bs-example-navbar-collapse-1" id="navbar-example">
-              <ul class="nav navbar-nav navbar-right">
-                <li class="active">
-                  <a class="page-scroll" href="{% url 'home' %}">홈</a>
-                </li>
-                <li>
-                  <a class="page-scroll" href="establish">설립취지</a>
-                </li>
-                <li>
-                  <a class="page-scroll" href="business">사업소개</a>
-                </li>
-                <li>
-                  <a class="page-scroll" href="news">뉴스</a>
-                </li>
-                <li>
-                  <a class="page-scroll" href="event">이벤트</a>
-                </li>
-                <li>
-                  <a class="page-scroll" href="activity">활동 모습</a>
-                </li>
-                <li>
-                  <a class="page-scroll" href="scontent">소셜 컨텐츠</a>
-                </li>
-                <li>
-                  <a class="page-scroll" href="support">후원</a>
-                </li>
-                <li>
-                  <a class="page-scroll" href="map">오시는 길</a>
-                </li>
-              </ul>
-            </div>
-            <!-- navbar-collapse -->
-          </nav>
-          <!-- END: Navigation -->
+            <li><a href="{% url 'home' %}">홈</a></li>
+            <li><a href="establish">설립취지</a></li>
+            <li><a href="business">사업소개</a></li>
+            <li><a href="news">뉴스</a></li>
+            <li><a href="event">이벤트</a></li>
+            <li><a href="activity">활동 모습</a></li>
+            <li><a href="scontent">소셜 컨텐츠</a></li>
+            <li><a href="support">후원</a></li>
+            <li><a href="map">오시는 길</a></li>
+          </ul>
+          <div class="icon menu-btn">
+            <i class="fas fa-bars"></i>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-  <!-- header-area end -->
+      </nav>
 </header>
 <!-- header end -->
 
@@ -135,7 +98,7 @@
           <div class="well-left">
             <div class="single-well">
               <a href="establish">
-								  <img src="/static/img/img_about.jpg" alt="">
+								  <img src="/static/img/business.jpg" alt="">
 								</a>
             </div>
           </div>
@@ -388,6 +351,8 @@
   <script src="/static/lib/appear/jquery.appear.js"></script>
   <script src="/static/lib/isotope/isotope.pkgd.min.js"></script>
 
+ 
+
   <!-- Contact Form JavaScript File -->
   <!--
     <script src="contactform/contactform.js"></script>
@@ -395,6 +360,27 @@
   <!--icons-->
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   <script src="/static/js/main.js"></script>
+  <!--nav-->
+  <script>
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = ()=>{
+      navbar.classList.add("show");
+      menuBtn.classList.add("hide");
+      body.classList.add("disabled");
+    }
+    cancelBtn.onclick = ()=>{
+      body.classList.remove("disabled");
+      navbar.classList.remove("show");
+      menuBtn.classList.remove("hide");
+    }
+    window.onscroll = ()=>{
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    }
+  </script>
+  
 </body>
 
 </html>
