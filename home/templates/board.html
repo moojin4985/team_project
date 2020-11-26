@@ -3,7 +3,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
+<!--
 <h1>게시판 페이지입니다</h1>
 <table>
     {% for list in postlist %}
@@ -11,9 +11,9 @@
         <li><a href="{% url 'viewboard' pk=list.pk %}">{{list.title}} <span>{{list.pub_date}}</span></a></li>
     </ul>
     {% endfor %}
-    <!--<button><a href="newpost/">글쓰기</a></button>-->
+    <button><a href="newpost/">글쓰기</a></button>
 </table>
-
+-->
 <h1>후원자들</h1>
 <!--
 <form method="POST">
