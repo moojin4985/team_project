@@ -323,7 +323,7 @@
 }
 
   /* business responsive */
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 365px) {
   .b_intro_txt br {
     display: none;
   }
