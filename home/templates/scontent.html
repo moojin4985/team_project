@@ -1,12 +1,7 @@
-{% extends 'base.html' %}
-{% block extra_head %}
 
-	<link rel="stylesheet" href="/static/activity/scontent.css">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-{% endblock %}
-
-
-{% block content %}
+<body>
+	{% extends 'base.html' %}
+	{% block content %}
 
 
 	<!-- start social contents -->
@@ -27,7 +22,7 @@
 						국내 최초 젊은 암 경험자(투병자&경험자)를 돕는 비영리법인 <b>'또봄'</b>과
 						유튜브를 시작하게 된 특별한 이유에 대해서 말합니다.</p>
 					<div class="  d-flex mt-3 mb-1">
-						<a class="btn btn-primary btn-md  mt-md-3  " href="#" role="button">자세히 보기</a>
+						<a class="btn btn-outline-dark btn-md  mt-md-3 text-dark  " href="#" role="button">자세히 보기</a>
 					</div>
 				</div>
 
@@ -46,10 +41,12 @@
 			<!-- Blog Entries Column -->
 			<div class="col-md-8">
 
-				<h1 class="my-4">스토리펀딩
-					<h4><small class="text-muted list-inline-item">2030 암환우 살리는 여행 버킷북 스토리</small></h4>
+				<ul class="list-inline">
+					<li class="list-inline-item"><h2>스토리펀딩</h2></li>
+					<li class="list-inline-item"><small class="text-muted">2030 암환우 살리는 여행 버킷북 스토리</small></li>
 
-				</h1>
+				
+				</ul>
 
 				<!-- Blog Post -->
 				<div class="card mb-4">
@@ -60,33 +57,33 @@
 						<p class="card-text text-truncate">저도 처음엔 스트레스성 위염인 줄 알았어요.
 							조직검사 결과, 버킷림프종 혈액암 말기라는 판정을 받았죠.....
 						</p>
-						<a href="#" class="btn btn-primary">자세히 보기 &rarr;</a>
+						<a href="#" class="btn btn-outline-dark">자세히 보기 &rarr;</a>
 					</div>
 					<div class="card-footer text-muted">
 						2020. 11. 24 by
-						<a href="#">일상을 찾아 떠나는 여행들 @이정훈</a>
+						<span class="text-dark stretched-link font-weight-bold">일상을 찾아 떠나는 여행들 @이정훈</span>
 					</div>
 				</div>
 
 				<!-- Blog Post -->
 				<div class="card mb-4">
-					<img class="card-img-top" src="/static/img/scont-img-02.jpg" height="" alt="Card image cap">
+					<img class="card-img-top" src="/static/img/scont-img-02.png" height="" alt="Card image cap">
 					<div class="card-body">
 						<h2 class="card-title">2화 저는 이미 죽은 사람이었어요</h2>
 						<cite title="source title">-혈액암 말기부터 일상까지<br><br></cite>
 						<p class="card-text text-truncate">2030 암 환자들은 젊다는 이유만으로 편견에 시달리곤해요. 갑작스럽게 혈액암 말기 선고를 받고 항암치료 때문에 회사에 병가를 냈는데, 어떤 분들은 제가 벌써 저 세상 사람인 것처럼 알고 있더라고요.
 						</p>
-						<a href="#" class="btn btn-primary">자세히 보기 &rarr;</a>
+						<a href="#" class="btn btn-outline-dark">자세히 보기 &rarr;</a>
 					</div>
 					<div class="card-footer text-muted">
 						2020. 11. 24 by
-						<a href="#">일상을 찾아 떠나는 여행들 @이정훈</a>
+						<span class="text-dark stretched-link font-weight-bold">일상을 찾아 떠나는 여행들 @이정훈</span>
 					</div>
 				</div>
 
 				<!-- Blog Post -->
 				<div class="card mb-4">
-					<img class="card-img-top" src="/static/img/scont-img-03.jpg" height="" alt="Card image cap">
+					<img class="card-img-top" src="/static/img/scont-img-03.png" height="" alt="Card image cap">
 					<figcaption class="figure-caption">여행버킷북 사진 중</figcaption>
 					<div class="card-body">
 						<h2 class="card-title">3화 다시 살고 싶어 떠난 여행</h2>
@@ -96,18 +93,18 @@
 							처음부터 여행을 꿈꾼 것 아녔어요. 완치 후 먹고픈 음식 리스트를 적다보니 예전에 사람들과 함께 다녔던 곳에 대한 기억들이 새록새록 떠올랐죠.
 
 						</p>
-						<a href="#" class="btn btn-primary">자세히 보기 &rarr;</a>
+						<a href="#" class="btn btn-outline-dark">자세히 보기 &rarr;</a>
 					</div>
 					<div class="card-footer text-muted">
 						2020. 11. 24 by
-						<a href="#">일상을 찾아 떠나는 여행들 @이정훈</a>
+						<span class="text-dark stretched-link font-weight-bold">일상을 찾아 떠나는 여행들 @이정훈</span>
 					</div>
 				</div>
 
 				<!-- Pagination -->
 				<ul class="pagination justify-content-center mb-4">
 					<li class="page-item">
-						<a class="page-link" href="#">&larr; Older</a>
+						<a class="page-link text-dark" href="#">&larr; Older</a>
 					</li>
 					<li class="page-item disabled">
 						<a class="page-link" href="#">Newer &rarr;</a>
@@ -178,11 +175,6 @@
 
 
 
-
-
-	<!-- <script>window.jQuery || document.write('<script src="js/jquery-1.10.1.min.js"><\/script>')</script>
-<script src="js/bootstrap.min.js"></script> -->
-
-
-	<!-- end start activity contents -->
+	<!-- end contents -->
 	{% endblock %}
+</body>
