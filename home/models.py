@@ -6,7 +6,7 @@ import re
 
 
 class Post(models.Model):
-    auther = models.ForeignKey('auth.User', on_delete=models.CASCADE)
+    #auther = models.ForeignKey('auth.User', on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     text = models.TextField()
     pub_date = models.DateTimeField(default = timezone.now)
@@ -17,7 +17,7 @@ class Post(models.Model):
 
 class Support(models.Model):
     idx = models.AutoField(primary_key=True)
-    auther = models.ForeignKey('auth.User', on_delete=models.CASCADE)
+    #auther = models.ForeignKey('auth.User', on_delete=models.CASCADE)
     name = models.CharField(max_length=50, blank=False)
 
     phone_regex = RegexValidator(regex=r"^[0-9]{3}-[0-9]{3,4}-[0-9]{4}$", message="")

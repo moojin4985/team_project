@@ -15,38 +15,38 @@
 </table>
 
 <h1>후원자들</h1>
+<!--
 <form method="POST">
     {% csrf_token %}
     <select name="search_option">
-        <option value="writer">이름</option>
-        <option value="phonenum">핸드폰번호</option>
-        <option value="email">이메일</option>
     {% if search_option == 'writer' %}
         <option value="writer" selected>이름</option>
-        <option value="phonenum">핸드폰번호</option>
+        <option value="phone_number">핸드폰번호</option>
         <option value="email">이메일</option>
-    {% elif search_option == 'phonenum' %}
+    {% elif search_option == 'phone_number' %}
         <option value="writer">이름</option>
-        <option value="phonenum" selected>핸드폰번호</option>
+        <option value="phone_number" selected>핸드폰번호</option>
         <option value="email">이메일</option>
     {% elif search_option == 'email' %}
         <option value="writer">이름</option>
-        <option value="phonenum">핸드폰번호</option>
+        <option value="phone_number">핸드폰번호</option>
         <option value="email" selected>이메일</option>
     {% endif %}
     </select>
     <input name="search" value="{{search}}">
     <input type="submit" value="검색">
 </form>
+-->
 <table>
     {% for list in supportall %}
     <tr>
-        <td>{{list.idx}}</td>
+        <td>{{list.id}}</td>
         <td>{{list.name}}</td>
         <td>{{list.phone_number}}</td>
         <td>{{list.email}}</td>
         <td>{{list.contents}}</td>
     </tr>
+    <!--
     <tr aria-colspan="7" align="center">
         <td>
             {% if start_page >= page_list_size %}
@@ -61,8 +61,8 @@
                 <a href="?start={{next_list}}">[다음]</a>
             {% endif %}
         </td>
-
     </tr>
+    -->
     {% endfor %}   
 </table>
 

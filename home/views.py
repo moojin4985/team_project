@@ -55,6 +55,7 @@ def map(request):
 
 #@csrf_exempt
 def board(request):
+    """
     # 검색기능
     try:
         search_option = request.POST['search_option']
@@ -65,21 +66,22 @@ def board(request):
     except:
         search = ''    
     
-    supportCount = Support.object.count()
+    supportCount = Support.objects.count()
     
     if search_option == 'writer': 
-        Searchlist = Support.object.filter( Q(name__contains = search)).order_by('-idx')
-    elif search_option == 'phonenum': 
-        Searchlist = Support.object.filter( Q(phonenum__contains = search)).order_by('-idx')
+        Searchlist = Support.objects.filter( Q(name__contains = search)).order_by('-idx')
+    elif search_option == 'phone_number': 
+        Searchlist = Support.objects.filter( Q(phone_number__contains = search)).order_by('-idx')
     elif search_option == 'email': 
-        Searchlist = Support.object.filter( Q(email__contains = search)).order_by('-idx')
+        Searchlist = Support.objects.filter( Q(email__contains = search)).order_by('-idx')
     
-    supportlist = Post.objects.order_by('-idx') 
-    
+    supportlist = Post.objects.all().order_by('-id') 
+    'supportlist': supportlist, 'supportCount':supportCount, 'search_option':search_option, 'search':search
+    """
+
     postlist = Post.objects.all()
     supportall = Support.objects.all()
-    return render(request, "board.html", {'postlist': postlist, 'supportall':supportall, 'supportlist': supportlist, 
-                                            'supportCount':supportCount, 'search_option':search_option, 'search':search})
+    return render(request, "board.html", {'postlist': postlist, 'supportall':supportall, })
 
 
 def viewboard(request, pk):
