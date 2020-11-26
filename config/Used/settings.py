@@ -76,7 +76,8 @@ CSP_SCRIPT_SRC_ELEM = ("'self'", "'unsafe-inline'","https://fonts.googleapis.com
                     "https://code.jquery.com", "https://cdn.jsdelivr.net", "http://cdnjs.cloudflare.com", "http://*.daumcdn.net")
 CSP_MEDIA_SRC = ("'self'", "https://t1.kakaocdn.net")
 CSP_CONNECT_SRC = ("'self'", "https://ka-f.fontawesome.com")
-CSP_IMG_SRC =  ("'self'", "https://dimg.donga.com", "http://cdn.kormedi.com", "http://img.hani.co.kr", "http://bycherry1.cafe24.com", "https://stlog1-local.kakao.com", "http://*.daumcdn.net")
+CSP_IMG_SRC =  ("'self'", "https://dimg.donga.com", "http://cdn.kormedi.com", "http://img.hani.co.kr", "http://bycherry1.cafe24.com",
+                "https://stlog1-local.kakao.com", "http://*.daumcdn.net", 'data:')
 CSP_FONT_SRC = ("'self'", "https://fonts.gstatic.com", "https://ka-f.fontawesome.com")
 CSP_FRAME_SRC = ("'self'", "https://www.youtube.com")
 
