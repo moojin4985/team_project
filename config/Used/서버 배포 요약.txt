@@ -1,0 +1,53 @@
+설정 요약
+
+
+mkdir deploy
+
+deploy로 소스 복사
+
+mkdir run
+
+sudo chown hmj977_email(유저):www-data run
+
+mkdir venv
+
+virtualenv -p python3.9 venv
+
+source venv/bin/activate
+
+pip3 install gunicorn
+
+cp config/Used/requirements.txt
+
+pip install -r requirements.txt
+
+python manage.py makemigrations
+
+python manage.py makemigrations home
+
+python manage.py migrate
+
+python manage.py collectstatic
+
+deactivate
+
+
+
+sudo cp config/Used/settings.py mysite/
+
+sudo cp config/Used/gunicorn.service /etc/systemd/system
+gunicorn.service 파일 내 경로 확인할 것
+
+sudo systemctl start gunicorn
+
+sudo systemctl enable gunicorn
+
+sudo cp config/Used/mysite /etc/nginx/sites-available/
+mysite 내 경로 확인할 것
+
+sudo ln -s /etc/nginx/sites-available/mysite /etc/nginx/sites-enabled
+
+sudo systemctl daemon-reload; sudo systemctl restart nginx; sudo systemctl restart gunicorn
+
+
+
