@@ -2,11 +2,29 @@
   .work-right-text {
     padding: 150px 150px;
   }
+
+    /* nav-bar responsive */
+    .container nav.navbar-dark {
+      position: relative;
+    }
+
+    #collapsibleNavbar {
+      position: absolute;
+      right: -1em;
+      top: 0;
+      height: 66px;
+    }
+
+    #collapsibleNavbar ul li a.nav-link {
+      padding: 0 1em;
+    }
+
+    /* end nav-bar responsive */
 }
 
 /* Normal desktop :999px. */
 
-@media (min-width: 999px) and (max-width: 1169px) {
+@media (min-width: 992px) {
   .slider-content {
     padding: 146px 0;
   }
@@ -17,6 +35,22 @@
     font-size: 18px;
     line-height: 28px;
   }
+
+  /* nav-bar responsive */
+  .container nav.navbar-dark {
+    position:relative;
+  }
+  #collapsibleNavbar {
+    position:absolute;
+    right: -1em;
+    top:0;
+    height: 66px;
+  }
+
+  #collapsibleNavbar ul li a.nav-link{
+    padding: 0 1em;
+  }
+    /* end nav-bar responsive */
 }
 
 /* Tablet desktop :768px. */
