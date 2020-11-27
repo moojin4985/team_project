@@ -382,6 +382,9 @@ div#preloader {
   z-index: 1000;
 }
 
+..navbar-nav {
+  font-size: 16px;
+}
 .stick .navbar-header a.navbar-brand {
   display: inline-block;
   height: 90px;
