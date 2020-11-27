@@ -31,7 +31,7 @@ def scontent(request):
 
 def news(request):
     newslist = News.objects.all()
-    return render(request, "news.html", {'newsllist':newslist})
+    return render(request, "news.html", {'newslist':newslist})
 
 
 def support(request):
