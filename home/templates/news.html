@@ -40,10 +40,28 @@
                     <p class="card-text"><small class="text-muted">한겨레 21 </small></p>
                 </div>
             </div>
-        </div>        
+        </div>       
+        {% for news in newslist %}
+        <div class="col-md-4 mb-5">
+            <div class="card border-0 pl-2 pr-2">
+                {% if news.mainphoto %}
+                <img class="card-img-top img-responsive"
+                    src="{{news.mainphoto.url}}" alt="Card image cap">
+                {% endif %}
+                <div class="card-body">
+                    <a href="{{news.link}}/">
+                        <h5 class="card-title">{{news.title}}</h5>
+                    </a>
+                    <p class="card-text">{{news.text}}</p>
+                    <p class="card-text"><small class="text-muted">{{news.newsname}}</small></p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
     </div>
     <div class="icon_arrowup"><a href="#"><img src="/static/img/icon/arrow-up.svg" alt="" width="32" height="32"
                 title="top"></a></div>
+    
 </div>
-  
+
 {% endblock %}
