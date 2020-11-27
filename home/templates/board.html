@@ -14,8 +14,10 @@
     <button><a href="newpost/">글쓰기</a></button>
 </table>
 -->
-<h1>후원자들</h1>
+
 <!--
+<h1>후원자들</h1>
+
 <form method="POST">
     {% csrf_token %}
     <select name="search_option">
@@ -36,7 +38,7 @@
     <input name="search" value="{{search}}">
     <input type="submit" value="검색">
 </form>
--->
+
 <table>
     {% for list in supportall %}
     <tr>
@@ -46,7 +48,7 @@
         <td>{{list.email}}</td>
         <td>{{list.contents}}</td>
     </tr>
-    <!--
+    
     <tr aria-colspan="7" align="center">
         <td>
             {% if start_page >= page_list_size %}
@@ -62,8 +64,8 @@
             {% endif %}
         </td>
     </tr>
-    -->
+    
     {% endfor %}   
 </table>
-
+-->
 {% endblock %}

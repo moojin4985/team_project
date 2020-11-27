@@ -3,7 +3,7 @@ from django.shortcuts import render, loader
 # Create your views here.
 from django.http import HttpResponse, HttpResponseRedirect
 from django.db.models import Q
-from .models import Post, Support
+from .models import News, Post
 
 
 def home(request):
@@ -26,19 +26,15 @@ def scontent(request):
     return render(request, "scontent.html")
 
 
+# def news(request):
+#    return render(request, "news.html")
+
 def news(request):
-    return render(request, "news.html")
+    newslist = News.objects.all()
+    return render(request, "news.html", {'newsllist':newslist})
 
 
 def support(request):
-    if request.method == 'POST':
-        new_supporter = Support.objects.create(
-            name = request.POST['name'],
-            phone_number = request.POST['phone_number'],
-            email = request.POST['email'],
-            contents = request.POST['contents'],
-        ) 
-        return HttpResponseRedirect('/home/support')
     return render(request, "support.html")
 
 
@@ -53,9 +49,9 @@ def event(request):
 def map(request):
     return render(request, "map.html")
 
-#@csrf_exempt
+"""
 def board(request):
-    """
+    
     # 검색기능
     try:
         search_option = request.POST['search_option']
@@ -77,14 +73,15 @@ def board(request):
     
     supportlist = Post.objects.all().order_by('-id') 
     'supportlist': supportlist, 'supportCount':supportCount, 'search_option':search_option, 'search':search
-    """
+    
 
     postlist = Post.objects.all()
-    supportall = Support.objects.all()
-    return render(request, "board.html", {'postlist': postlist, 'supportall':supportall, })
+    #supportall = Support.objects.all() 'supportall':supportall, 
+    return render(request, "board.html", {'postlist': postlist})
 
 
 def viewboard(request, pk):
     post = Post.objects.get(pk=pk)
     return render(request, "viewboard.html", {'post': post})
+"""
 
