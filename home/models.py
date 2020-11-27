@@ -36,4 +36,4 @@ class News(models.Model):
     mainphoto = models.ImageField(blank=True, null=True)
 
     def __str__(self):
-        return self.newsname
+        return self.title
