@@ -1,6 +1,56 @@
 설정 요약
 
 
+패키지 설치
+
+sudo add-apt-repository ppa:deadsnakes/ppa
+
+sudo apt install python3.9
+
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.6 1
+
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.9 2
+
+sudo apt install python3-pip
+
+sudo apt install python3.9-distutils
+
+pip3 install --upgrade pip
+
+cd /usr/lib/python3/dist-packages
+sudo cp apt_pkg.cpython-36m-x86_64-linux-gnu.so apt_pkg.so
+
+sudo apt install virtualenv
+
+wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -
+
+echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list
+
+sudo apt-get update
+
+sudo apt-get install -y mongodb-org
+
+sudo systemctl start mongod
+
+sudo systemctl enable mongod.service
+
+sudo systemctl daemon-reload
+
+sudo touch /etc/apt/sources.list.d/nginx.list
+echo "deb http://nginx.org/packages/ubuntu/ bionic nginx" | sudo tee -a /etc/apt/sources.list.d/nginx.list
+echo "deb-src http://nginx.org/packages/ubuntu/ bionic nginx"| sudo tee -a /etc/apt/sources.list.d/nginx.list
+
+wget http://nginx.org/keys/nginx_signing.key
+sudo apt-key add nginx_signing.key
+
+sudo apt-get update
+
+sudo apt-get install nginx
+
+
+
+코드 복사
+
 mkdir deploy
 
 deploy로 소스 복사
@@ -17,9 +67,11 @@ source venv/bin/activate
 
 pip3 install gunicorn
 
-cp config/Used/requirements.txt
+cp config/Used/requirements.txt ./
 
 pip install -r requirements.txt
+
+sudo rm -R home/migrations/
 
 python manage.py makemigrations
 
@@ -33,6 +85,8 @@ deactivate
 
 
 
+서버 설정 : 서버의 리눅스에 따라 잘 되지 않을 수도 있음
+
 sudo cp config/Used/settings.py mysite/
 
 sudo cp config/Used/gunicorn.service /etc/systemd/system
@@ -42,11 +96,20 @@ sudo systemctl start gunicorn
 
 sudo systemctl enable gunicorn
 
+sudo mkdir /etc/nginx/sites-enabled
+sudo mkdir /etc/nginx/sites-available
+
 sudo cp config/Used/mysite /etc/nginx/sites-available/
 mysite 내 경로 확인할 것
 
 sudo ln -s /etc/nginx/sites-available/mysite /etc/nginx/sites-enabled
 
+sudo systemctl daemon-reload; sudo systemctl restart nginx; sudo systemctl restart gunicorn
+
+
+안될 경우
+nginx 설정 구글링 참고
+sudo cp config/Used/mysite.conf /etc/nginx/conf.d
 sudo systemctl daemon-reload; sudo systemctl restart nginx; sudo systemctl restart gunicorn
 
 
